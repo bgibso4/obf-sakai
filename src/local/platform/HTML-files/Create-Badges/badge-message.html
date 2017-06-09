@@ -1,0 +1,126 @@
+<html>
+    <title>
+        Western Badge Factory
+    </title>
+    <meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="../../CSS-files/createBadges.css">
+    <head>
+        
+    </head>
+    
+    <body>
+        <header id="navbar">
+            
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="../../images/western-logo.gif"  width="240px" height="42px">
+                </div>
+                <div class="nav-list">
+                    <br>
+                    <ul class="navbar-list">
+                        <li>
+                            <a href="../HomePage.html" class="navLinks">HOME</a>
+                        </li>
+                        <li>
+                            <a href="../profile.html" class="navLinks">PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="../passport.html" class="navLinks">BADGES</a>
+                        </li>
+                        <li>
+                            <a href="../issuingPage.html" class="navLinks"><b>ISSUE</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="title-bar">
+            <p class="title-row">
+                Issue / Create Badges
+            </p>
+        </div>
+        <table width="95%">
+            <tr>
+                <td width=20%>
+                    <div class="side-menu">
+                        <ul>
+                            <li><a href="../issuingPage.html" class="side-menu-elements">ISSUE BADGES</a></li>
+                            <li><a href="GettingStarted.html" class="side-menu-elements"><b>CREATE BADGES</b></a></li>
+                            <li><a href="../passport.html" class="side-menu-elements">MANAGE BADGES</a></li>
+                        </ul>
+                    </div>
+                </td>
+                <td width="80%">
+                    <div class="mainContent">
+                        <div class="pageTitle">
+                            <h1>Create New Badge</h1>
+                        </div>
+                        <div class="create-nav">
+                            <ol>
+                                <li class="create-nav-elements"><a href="GettingStarted.html" class="create-nav-links">1. Getting Started</a></li>
+                                <li class="create-nav-elements" ><a href="badge-details.html" class="create-nav-links">2. Details</a></li>
+                                <li class="create-nav-elements"><a href="badge-criteria.html" class="create-nav-links">3. Criteria</a></li>
+                                <li class="create-nav-elements"><a href="badge-message.html" class="create-nav-links"><b>4. Message</b></a></li>
+                                <li class="create-nav-elements"><a href="badge-preview.html" class="create-nav-links">5. Preview</a></li>
+                            </ol>
+                        </div>
+                        <div class="pageInfo">
+                            <p>Email message to the receiver of the badge. A link for accepting the badge is automatically created. These fields do not need to be completed when creating the badge.</p>
+                        </div>
+                        <div class="messageForm">
+                            <div class="BadgeDetails-input">
+                                <div class="data-labels">
+                                    <label>Email Subject</label>
+                                </div>
+                                <input type="text" name="emailSubject" id="subjectInput" style="width: 500px" maxlength="128">
+                            </div>
+                            <div class="BadgeDetails-input">
+                                <div class="data-labels">
+                                    <label>Email Message Body</label>
+                                </div>
+                                <textarea type="text" name="emailMessage" id="messageInput"  maxlength="1000" style="width: 900px" rows="10"></textarea>
+                            </div>
+                            <div class="BadgeDetails-input">
+                                <div class="data-labels">
+                                    <label>Button Link Text</label>
+                                </div>
+                                <input type="text" name="buttonText" id="buttonTextInput"  maxlength="1000" style="width: 500px">
+                                <p class="buttonTextDescription">Set the text for badge download button. Earners will get their badges by clicking this button.<br> Default link text: "Get your badge"</p>
+                            </div>
+                            <div class="BadgeDetails-input">
+                                <div class="data-labels">
+                                    <label>Email Message Footer</label>
+                                </div>
+                                <textarea type="text" name="emailFooter" id="footerInput"  maxlength="1000" style="width: 900px" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="saving messageSave">
+                            <button value="Save" class="saveButton" onclick="saveFunction()">Save</button>
+                        </div>
+                        <script>
+                            function saveFunction(){
+                                // Check browser support
+                                if (typeof(Storage) !== "undefined") {
+                                    // Store
+                                    localStorage.setItem("emailSubject", document.getElementById("subjectInput").value);
+                                    localStorage.setItem("emailMessage", document.getElementById("messageInput").value)
+                                    localStorage.setItem("buttonLinkText", document.getElementById("buttonTextInput").value)
+                                    localStorage.setItem("emailFooter", document.getElementById("footerInput").value)
+                                    // Retrieve
+                                    //document.getElementById("result").innerHTML = localStorage.getItem("name");
+                                } else {
+                                    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+                                }
+                            }
+                        
+                        </script>
+                    </div>
+                    
+                    
+                </td>
+            </tr>
+        </table>
+    </body>
+    
+
+</html>

@@ -1,0 +1,148 @@
+<html>
+    <title>
+        Western Badge Factory
+    </title>
+    <meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="../../CSS-files/createBadges.css">
+    <head>
+        
+    </head>
+    
+    <body>
+        <header id="navbar">
+            
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="../../images/western-logo.gif"  width="240px" height="42px">
+                </div>
+                <div class="nav-list">
+                    <br>
+                    <ul class="navbar-list">
+                        <li>
+                            <a href="../HomePage.html" class="navLinks">HOME</a>
+                        </li>
+                        <li>
+                            <a href="../profile.html" class="navLinks">PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="../passport.html" class="navLinks">BADGES</a>
+                        </li>
+                        <li>
+                            <a href="../issuingPage.html" class="navLinks"><b>ISSUE</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="title-bar">
+            <p class="title-row">
+                Issue / Create Badges
+            </p>
+        </div>
+        <table width="95%">
+            <tr>
+                <td width=20%>
+                    <div class="side-menu">
+                        <ul>
+                            <li><a href="../issuingPage.html" class="side-menu-elements">ISSUE BADGES</a></li>
+                            <li><a href="GettingStarted.html" class="side-menu-elements"><b>CREATE BADGES</b></a></li>
+                            <li><a href="../passport.html" class="side-menu-elements">MANAGE BADGES</a></li>
+                        </ul>
+                    </div>
+                </td>
+                <td width="90%">
+                    <div class="mainContent">
+                        <div class="pageTitle">
+                            <h1>Create New Badge</h1>
+                        </div>
+                        <div class="create-nav">
+                            <ol>
+                                <li class="create-nav-elements"><a href="GettingStarted.html" class="create-nav-links">1. Getting Started</a></li>
+                                <li class="create-nav-elements" ><a href="badge-details.html" class="create-nav-links"><b>2. Details</b></a></li>
+                                <li class="create-nav-elements"><a href="badge-criteria.html" class="create-nav-links">3. Criteria</a></li>
+                                <li class="create-nav-elements"><a href="badge-message.html" class="create-nav-links">4. Message</a></li>
+                                <li class="create-nav-elements"><a href="badge-preview.html" class="create-nav-links">5. Preview</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="pageInfo">
+                        <p>The metadata of the badge which is displayed when the badge is opened. Mandatory fields: image,  name and description.
+                        </p>
+                    </div>
+                    <div class="content">
+                        <div class="loadImage-block">
+                            <div class="placeholder">
+                                <img src="../../images/placeholder-image.png" height="150px" width="140px">
+                            </div>
+                        </div>
+                        <div class="detailsForm">
+                            <div class="BadgeDetails-input">
+                                <div class="data-labels">
+                                    <label>Name</label>
+                                    <span class="red">*</span>
+                                </div>
+                                <input type="text" name="badgeName" id="nameInput" style="width: 500px" maxlength="128">
+                            </div>
+                            <div class="BadgeDetails-input">
+                                <div class="data-labels">
+                                    <label>Description</label>
+                                    <span class="red">*</span>
+                                </div>
+                                <textarea type="text" name="badgeDescription" id="descriptionInput"  maxlength="1000" style="width: 300px" rows="3"></textarea>
+                            </div>
+                            <div class="BadgeDetails-input">
+                                <div class="data-labels">
+                                    <label>Tags</label>
+                                </div>
+                                <input type="text" name="badgeTags" id="tagInput"  maxlength="1000" style="width: 500px">
+                            </div>
+                            <div class="Badgedetails-input">
+                                <div class="data-labels">
+                                    <label>Default expiration time</label>
+                                </div>
+                                <div class="expiryInfo">
+                                    <div class="expiryNum">
+                                        <input type="number" name="badgeExpiryNum" id="expiryNumInput" style="width: 75px" min="1">
+                                    </div>
+                                    <div class="expiryType">
+                                        <select id="expiry-type" style="width: 120px">
+                                            <option value="1" selected>months</option>
+                                            <option value="12">years</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="saving">
+                                <button value="Save" class="saveButton" id="save" onclick="saveFunction()">Save</button>
+                            </div>
+                            
+                            <div id="result"></div>
+                            <script>
+                                
+                                function saveFunction(){
+                                    // Check browser support
+                                    if (typeof(Storage) !== "undefined") {
+                                        // Store
+                                        localStorage.setItem("name", document.getElementById("nameInput").value);
+                                        localStorage.setItem("description", document.getElementById("descriptionInput").value)
+                                        localStorage.setItem("tags", document.getElementById("tagInput").value)
+                                        localStorage.setItem("expNum", document.getElementById("expiryNumInput").value)
+                                        localStorage.setItem("expType", document.getElementById("expiry-type").value)
+                                        // Retrieve
+                                        //document.getElementById("result").innerHTML = localStorage.getItem("name");
+                                    } else {
+                                        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+                                    }
+                                }
+                                
+                            </script>
+                        </div>
+                    </div>
+                    
+                </td>
+            </tr>
+        </table>
+    </body>
+    
+
+</html>

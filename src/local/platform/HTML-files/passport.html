@@ -1,0 +1,115 @@
+<html>
+    <title>
+        Western Passport
+    </title>
+    <meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="../CSS-files/passport-myBadges.css">
+    <head>
+        
+    </head>
+    
+    <body>
+        <header id="navbar">
+            
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="../images/cancred-passport-logo.png"  width="300px" height="42px">
+                </div>
+                <div class="nav-list">
+                    <br>
+                    <ul class="navbar-list">
+                        <li>
+                            <a href="HomePage.html">HOME</a>
+                        </li>
+                        <li>
+                            <a href="profile.html">PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="passport.html"><b>BADGES</b></a>
+                        </li>
+                        <li>
+                            <a href="issuingPage.html">ISSUE</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="title-bar">
+            <p class="title-row">
+                Passport / My Badges
+            </p>
+        </div>
+        <table width="95%">
+            <tr>
+                <td width=10%>
+                    <div class="side-menu">
+                        <ul>
+                            <li><a href="passport.html"><b>MY BADGES</b></a></li>
+                        </ul>
+                    </div>
+                </td>
+                <td width="80%">
+                    <form action="getBadges.php" method="get">
+                        <div class="search-Criteria">
+                            <table>
+                                <tr class="form-group">
+
+                                    <td>
+                                        <label class="search-labels" for="grid-search-badgeSearch">Search:</label>
+                                    </td>
+                                    <td>
+                                        <input type="search" name="badgeSearch" id="grid-search-badgeSearch" placeholder="Search by name" style="width: 700px"><br>
+                                    </td>
+                                </tr>
+                                <tr class="form-group">
+                                    <td>
+                                        <label class="search-labels" for="grid-search-badgeSearch">Tags:</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="badgeTags" id="grid-search-tagFiltered"><br>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                                
+                            <fieldset class="form-group">
+                                <legend class="search-labels">Order:</legend>
+                                <div class="ordering-options-text">
+                                    <label class="radio-inline" for="radio-date">
+                                        <input type="radio" id="radio-date" name="order" value="mtime">
+
+                                        by date modified
+                                    </label>
+                                    <label class="radio-inline" for="radio-name">
+                                        <input type="radio" id="radio-name" name="order" value="name">
+
+                                        by name
+                                    </label>
+                                    <label class="radio-inline" for="radio-issuer">
+                                        <input type="radio" id="radio-issuer" name="order" value="issuer_name">
+
+                                        by issuer name
+                                    </label>
+                                    <label class="radio-inline" for="radio-expiration">
+                                        <input type="radio" id="radio-expiration" name="order" value="expires_on">
+
+                                        by expiration date
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <center><input type="submit" value="Find"></center>
+                        </div>
+
+                    </form>
+                </td>
+            </tr>
+            
+
+
+        </table>
+        
+        
+    </body>
+
+</html>

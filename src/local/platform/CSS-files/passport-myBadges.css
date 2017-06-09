@@ -1,0 +1,107 @@
+.title-bar{
+
+}
+
+.title-row{
+    background-color: darkmagenta;
+    color: white;
+    padding-left: 50px;
+    margin-top: 20px;
+    font-size: 32px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #7f7179;
+}
+
+.side-menu{
+    font-size: 14px;
+}
+
+.search-Criteria{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 55px;
+}
+.search-labels{
+    padding-right: 50;
+    font-weight: bold;
+    float: left;
+    margin-right: 5px;
+}
+.checkbox label{
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+fieldset{
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+.radio-inline{
+    padding-left: 20px;
+}
+
+td{
+    vertical-align: text-top;
+    padding: 3px;
+}
+
+.ordering-options-text{
+    margin-left: 10%;
+}
+
+tr.form-group{
+    padding: 100px;
+    vertical-align: middle;
+}
+
+input{
+    font-size: 16px;
+    padding: 5px;
+}
+
+.navbar-list{
+    list-style-type: none;
+    display: inline;
+    text-align: center;
+    
+}
+nav li{
+    display: inline;
+    padding-right: 15px;
+    
+}
+
+header{
+}
+
+.navbar{
+    
+}
+
+.logo{
+    float: left;
+    padding-right: 250px;
+}

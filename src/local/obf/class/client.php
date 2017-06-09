@@ -7,7 +7,7 @@
  * Time: 12:59 PM
  */
 
-class client
+class obf_client
 {
     private $clientId;
 

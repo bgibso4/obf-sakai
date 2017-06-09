@@ -1,0 +1,175 @@
+.title-bar{
+
+}
+
+.title-row{
+    background-color: darkmagenta;
+    color: white;
+    padding-left: 50px;
+    margin-top: 20px;
+    font-size: 32px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+
+.westernLogo{
+    float: right;
+}
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #7f7179;
+}
+
+.navbar-list{
+    list-style-type: none;
+    display: inline;
+    text-align: center;
+    
+}
+nav li{
+    display: inline;
+    padding-right: 15px;
+    
+}
+
+header{
+}
+
+.navbar{
+    
+}
+
+.logo{
+    float: left;
+    padding-right: 275px;
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+    
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.side-menu{
+    font-size: 14px;
+}
+
+li{
+    margin-bottom: 25px;
+}
+
+.pageTitle{
+    padding-left: 1px;
+}
+
+td{
+    vertical-align: top;
+}
+
+.create-nav{
+    text-align: center;
+}
+.create-nav-elements{
+    display: inline;
+    padding-right: 30px
+}
+.create-nav-links{
+    color: #7f7179;
+}
+
+.pageInfo{
+    padding-top: 1px;
+}
+
+.placeholder{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.content{
+    float: left;
+}
+
+.loadImage-block{
+    float: left;
+}
+.detailsForm{
+    float: left;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+input{
+    padding: 5px;
+    box-shadow: 10px;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.red{
+    color: red;
+}
+
+.data-Labels{
+    padding-bottom: 5px;
+    font-size: 14px;
+    color: black;
+}
+.badgedetails-input{
+    padding-bottom: 30px;
+}
+
+textarea{
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.expiryNum{
+    float: left;
+}
+.expiryType{
+    float: left;
+    padding-left: 40px;
+    font-size: 16px;
+}
+select{
+    font-size: 16px;
+    padding: 5px;
+}
+
+.saving{
+    padding-top: 30px;
+    text-align: right
+}
+
+.saveButton{
+    padding: 5;
+    padding-left: 7;
+    padding-right: 7;
+    background-color: #7F7179;
+    border-color: #5C5258;
+    color: #FFF;
+    font-size: 15px;
+}
+.saveButton:hover{
+    background-color: #5C5258;
+    cursor: pointer;
+}
+
+.messageSave{
+    padding-right: 300px;
+}
+
+.buttonTextDescription{
+    font-size: 13px;
+}
