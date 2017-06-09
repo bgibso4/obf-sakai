@@ -9,6 +9,9 @@
 
 class obf_client
 {
+    /**
+     * @var $clientId stores the individual id of user
+     */
     private $clientId;
 
     /**
